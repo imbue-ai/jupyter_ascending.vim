@@ -1,0 +1,40 @@
+===============================================================================
+jupyter_ascending                                           *jupyter_ascending*
+
+Easily interact with the python package `jupyter_ascending`
+
+
+Vim Package   : https://github.com/untitled-ai/jupyter_ascending.vim/
+
+Python Package: https://github.com/untitled-ai/jupyter_ascending
+
+===============================================================================
+jupyter_ascending_config                              *jupter_ascending_config*
+
+jupyter_ascending_python_executable     *g:jupyter_ascending_python_executable*
+    The path/executable that can be used to execute Python.
+
+    If using virtual environment, make sure to have the virtual environment
+    enabled or accessible to Vim.
+
+    Default: ~
+        "python"
+
+jupyter_ascending_match_pattern             *g:jupyter_ascending_match_pattern*
+
+    Only files that match this file pattern will be synced and/or executed
+    with the `jupyter_ascending` package.
+
+    Default: ~
+        ".synced.py"
+
+jupyter_ascending_auto_write                   *g:jupyter_ascending_auto_write*
+
+    If true, will auto write and sync the file to Jupyter Notebook whenever
+    you save in Vim.
+
+    Default: ~
+        `v:true`
+
+
+ vim:tw=78:et:ft=help:norl:
