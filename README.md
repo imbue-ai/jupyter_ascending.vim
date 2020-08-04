@@ -2,6 +2,8 @@
 
 Vim plugin to interact with `jupyter_ascending`
 
+![Jupyter Ascending](./media/simple_jupyter_ascending.gif)
+
 
 ## Installation
 
@@ -17,3 +19,7 @@ Then install this plugin using the vim plugin manager you like. For example:
 ```
 Plug 'untitled-ai/jupyter_ascending.vim'
 ```
+
+## Usage
+
+See `doc/jupyter_ascending.txt` for more information.
