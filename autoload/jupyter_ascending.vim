@@ -1,6 +1,14 @@
+function! s:on_stdout(j, d, e)
+  if len(a:d) > 0 && len(a:d[0]) > 0
+    echom '[JupyterAscending]' a:d
+  endif
+endfunction
+
 function! s:execute(command_string) abort
   if has('nvim')
-    call jobstart(a:command_string)
+    call jobstart(a:command_string, {
+          \ 'on_stdout': funcref('s:on_stdout')
+          \ })
   else
     call systemlist(a:command_string)
   end
