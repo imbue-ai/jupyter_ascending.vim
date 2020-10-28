@@ -7,7 +7,7 @@ function! jupyter_ascending#sync() abort
   endif
 
   let g:last_jupyter_ascending_val = system(printf(
-        \ "%s -m jupyter_ascending.requests.sync --filename '%'",
+        \ "%s -m jupyter_ascending.requests.sync --filename '%s'",
         \ g:jupyter_ascending_python_executable,
         \ file_name
         \ ))
