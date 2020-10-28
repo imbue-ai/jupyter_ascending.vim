@@ -13,6 +13,6 @@ augroup END
 
 nnoremap <Plug>JupyterExecute :call jupyter_ascending#execute()<CR>
 
-if get(g:, 'jupyter_ascending_default_mappings', v:false)
+if get(g:, 'jupyter_ascending_default_mappings', v:true)
   nmap <space><space>x <Plug>JupyterExecute
 endif

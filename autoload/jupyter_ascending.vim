@@ -1,3 +1,10 @@
+function! s:execute(command_string) abort
+  if has('nvim')
+    call jobstart(a:command_string)
+  else
+    call systemlist(a:command_string)
+  end
+endfunction
 
 function! jupyter_ascending#sync() abort
   let file_name = expand("%:p")
@@ -6,11 +13,13 @@ function! jupyter_ascending#sync() abort
     return
   endif
 
-  let g:last_jupyter_ascending_val = system(printf(
+  let command_string = printf(
         \ "%s -m jupyter_ascending.requests.sync --filename '%s'",
         \ g:jupyter_ascending_python_executable,
         \ file_name
-        \ ))
+        \ )
+
+  call s:execute(command_string)
 endfunction
 
 function! jupyter_ascending#execute() abort
@@ -20,10 +29,12 @@ function! jupyter_ascending#execute() abort
     return
   endif
 
-  let g:last_nb_exec_val = system(printf(
+  let command_string = printf(
         \ "%s -m jupyter_ascending.requests.execute --filename '%s' --linenumber %s",
         \ g:jupyter_ascending_python_executable,
         \ file_name,
         \ line('.')
-        \ ))
+        \ )
+
+  call s:execute(command_string)
 endfunction
