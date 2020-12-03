@@ -11,8 +11,8 @@ augroup JupyterAscending
 augroup END
 
 
-nnoremap <Plug>JupyterExecute :call jupyter_ascending#execute()<CR>
-nnoremap <Plug>JupyterExecute :call jupyter_ascending#execute_all()<CR>
+nnoremap <Plug>JupyterExecute    :call jupyter_ascending#execute()<CR>
+nnoremap <Plug>JupyterExecuteAll :call jupyter_ascending#execute_all()<CR>
 
 if get(g:, 'jupyter_ascending_default_mappings', v:true)
   nmap <space><space>x <Plug>JupyterExecute
