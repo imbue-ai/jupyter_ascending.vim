@@ -8,7 +8,7 @@ Currently only supports Jupyter Notebook.
 
 ## Installation
 
-First, you must install [jupyter_ascending](https://github.com/quantum-booty/jupyter_ascending) in the python envirenment you're working in. For example:
+First, you must install [jupyter_ascending](https://github.com/untitled-ai/jupyter_ascending) in the python envirenment you're working in. For example:
 ```bash
 $ pyenv activate my_notebook_env
 $ pip install jupyter_ascending
