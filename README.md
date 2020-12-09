@@ -36,7 +36,7 @@ Plug 'untitled-ai/jupyter_ascending.vim'
 ## Usage
 1) First create a Jupyter notebook notebook_name.synced.ipynb.
 2) Then generate a notebook_name.synced.py file using jupytext with "percent format". (see Paired notebooks in [jupytext](https://github.com/mwouts/jupytext))
-3) Jupyter Ascending will update the .synced.ipynb every time .synced.py is saved. 
+3) Edit .synced.py file in vim and Jupyter Ascending will update the .synced.ipynb every time .synced.py is saved. 
 4) Send commands to Jupyter notebook via the following mappings:
 
 Execute cell
