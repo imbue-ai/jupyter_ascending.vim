@@ -1,5 +1,5 @@
 let g:jupyter_ascending_python_executable = get(g:, 'jupyter_ascending_python_executable', 'python')
-let g:jupyter_ascending_match_pattern     = get(g:, 'jupyter_ascending_match_pattern', '.synced.py')
+let g:jupyter_ascending_match_pattern     = get(g:, 'jupyter_ascending_match_pattern', '.sync.py')
 let g:jupyter_ascending_auto_write        = get(g:, 'jupyter_ascending_auto_write', v:true)
 
 augroup JupyterAscending
