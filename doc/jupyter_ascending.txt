@@ -26,7 +26,7 @@ jupyter_ascending_match_pattern             *g:jupyter_ascending_match_pattern*
     with the `jupyter_ascending` package.
 
     Default: ~
-        ".synced.py"
+        ".sync.py"
 
 jupyter_ascending_auto_write                   *g:jupyter_ascending_auto_write*
 
