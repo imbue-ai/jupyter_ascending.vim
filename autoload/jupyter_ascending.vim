@@ -41,8 +41,9 @@ function! jupyter_ascending#execute() abort
         \ "%s -m jupyter_ascending.requests.execute --filename '%s' --linenumber %s",
         \ g:jupyter_ascending_python_executable,
         \ file_name,
-        \ line('.')
+        \ line('.')-1
         \ )
+" -1 because vim starts at 1
 
   call s:execute(command_string)
 endfunction
