@@ -14,7 +14,7 @@ $ pyenv activate my_notebook_env
 $ pip install jupyter_ascending
 ```
 
-It is possible you won't need to run the following commands on newer version of jupyter notebook, but it's recommended that you do anyway, because installing extensions is hard.
+It is possible you won't need to run the following commands on newer version of jupyter notebook, but it's recommended that you do anyway, because installing extensions is hard. Or unless you already executed them in the previous step of installing `jupyter_ascending`.
 ```bash
 $ jupyter nbextension install --py --sys-prefix jupyter_ascending
 $ jupyter nbextension     enable jupyter_ascending --sys-prefix --py
@@ -30,7 +30,12 @@ $ jupyter serverextension list
 Then install this plugin using the vim plugin manager you like. For example:
 
 ```
-Plug 'untitled-ai/jupyter_ascending.vim'
+  Plug 'untitled-ai/jupyter_ascending.vim'
+```
+
+Or if you use lua configs:
+```
+  use 'untitled-ai/jupyter_ascending.vim'
 ```
 
 ## Usage
@@ -49,7 +54,10 @@ Execute all cells
 nmap <space><space>X <Plug>JupyterExecuteAll
 ```
 
+NOTE: it syncs your `py` file with `ipynb` file whenever you save your `py` file.
+
 Use `# %%` to separate cells.
+Use `# %% [markdown]` to make a markdown block.
 
 
 ## Settings
