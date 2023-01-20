@@ -13,8 +13,11 @@ augroup END
 
 nnoremap <Plug>JupyterExecute    :call jupyter_ascending#execute()<CR>
 nnoremap <Plug>JupyterExecuteAll :call jupyter_ascending#execute_all()<CR>
+nnoremap <Plug>JupyterRestart    :call jupyter_ascending#restart()<CR>
+
 
 if get(g:, 'jupyter_ascending_default_mappings', v:true)
   nmap <space><space>x <Plug>JupyterExecute
   nmap <space><space>X <Plug>JupyterExecuteAll
+  nmap <space><space>r <Plug>JupyterRestart
 endif
