@@ -54,6 +54,11 @@ Execute all cells
 nmap <space><space>X <Plug>JupyterExecuteAll
 ```
 
+Restart kernel
+```vim
+nmap <space><space>r <Plug>JupyterRestart
+
+```
 NOTE: it syncs your `py` file with `ipynb` file whenever you save your `py` file.
 
 Use `# %%` to separate cells.

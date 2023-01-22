@@ -62,3 +62,20 @@ function! jupyter_ascending#execute_all() abort
 
   call s:execute(command_string)
 endfunction
+
+
+function! jupyter_ascending#restart() abort
+  let file_name = expand("%:p")
+
+  if match(file_name, g:jupyter_ascending_match_pattern) < 0
+    return
+  endif
+
+  let command_string = printf(
+        \ "%s -m jupyter_ascending.requests.restart --filename '%s'",
+        \ g:jupyter_ascending_python_executable,
+        \ file_name
+        \ )
+
+  call s:execute(command_string)
+endfunction
